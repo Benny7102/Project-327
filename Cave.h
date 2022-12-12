@@ -11,8 +11,7 @@ using namespace std;
 class Cave
 {
     public:
-    int choice_num;
-    void pathChoice(mc* player, char);
+    void pathChoice(mc* player);
 };
-int randnum();
+
 #endif

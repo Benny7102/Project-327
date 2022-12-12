@@ -9,9 +9,7 @@
 class Bridge
 {
     public:
-    int bridge_num;
 	void BridgeCondition(mc* player);
 };
 
-int randnum(int, int);
 #endif

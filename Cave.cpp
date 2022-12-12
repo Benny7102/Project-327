@@ -1,16 +1,18 @@
 #include "Cave.h"
+#include <iostream>
+#include <time.h>
+#include <stdlib.h>
+#include "mc.h"
 
 using namespace std;
 
 
-int randnum()
-{
-    int choice_num = rand() % 3;
-}
-
-void Cave::pathChoice(mc* player, char choice)
-{
+void Cave::pathChoice(mc* player)
+{   
+    char choice;
+    cout << "Please choose a path a,b, or c:";
     cin >> choice;
+    int choice_num = (rand() %3);
     bool x = true;
     while (x)
     {
@@ -76,7 +78,7 @@ void Cave::pathChoice(mc* player, char choice)
         }
         else
         {
-            cout << "Not a path Enter another choice:" << endl;
+            cout << "Not a valid option!Please enter a valid option a,b or c:" << endl;
             cin >> choice;
         }
     }

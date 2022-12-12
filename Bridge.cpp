@@ -1,28 +1,27 @@
 #include "Bridge.h"
-
+#include <iostream>
+#include <stdlib.h>
+#include <time.h>
+#include <math.h>
 using namespace std;
 
 
-int randnum(int num, int num2)
-{
-    int num = 0;
-    int num2 = 2;
-
-    int bridge_num = rand() % (num2 + 1 - num) + num;
-}
-
 void Bridge::BridgeCondition(mc* player)
 {
+    int bridge_num = (rand() %3);
     if (bridge_num == 0)
     {
+        cout << "The bridge has collapsed behind you. You have fallen great heights." << endl; 
         player -> remove_health(100000);
     }
     else if (bridge_num == 1)
     {
+        cout << "The bridge has collapsed." << endl;
         player -> remove_health(5);
+        player -> remove_damage(3);
     }
     else
     {
-        cout << "The bridge didn't break!" << endl;
+        cout << "You were able to cross successfully!" << endl;
     }
 }
