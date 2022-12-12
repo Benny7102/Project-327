@@ -1,44 +1,46 @@
-CC=g++ -std=c++11 -g
+GCC = g++
 
-OBJS=main.o mc.o enemy.o Minotaur.o Rogueknight.o Ghost.o Skull.o Bridge.o Cave.o RuinedCity.o options.o
+OBJS = mc.o enemy.o Minotaur.o Rogueknight.o Ghost.o Skull.o Bridge.o Cave.o RuinedCity.o options.o main.o
 
-default: Project
+OUT = main.out
 
-Project: $(OBJS)
-            $(CC) -o Project $(OBJS)
+default: main
+
+main: $(OBJS)
+    $(GCC) -o Main $(OBJS)
 
 mc.o: mc.cpp mc.h 
-    $(CC) -c mc.cpp -o mc.o
+    $(GCC) -c mc.cpp -o mc.o
 
 enemy.o: enemy.cpp enemy.h mc.h
-    $(CC) -c enemy.cpp -o enemy.o
+    $(GCC) -c enemy.cpp -o enemy.o
 
 Minotaur.o: Minotaur.cpp Minotaur.h mc.h enemy.h
-    $(CC) -c Minotaur.cpp -o Minotaur.o
+    $(GCC) -c Minotaur.cpp -o Minotaur.o
 
 Rogueknight.o: Rogueknight.cpp Rogueknight.h mc.h enemy.h
-    $(CC) -c Rogueknight.cpp -o Rogueknight.o
+    $(GCC) -c Rogueknight.cpp -o Rogueknight.o
 
 Ghost.o: Ghost.cpp Ghost.h mc.h enemy.h
-    $(CC) -c Ghost.cpp -o Ghost.o
+    $(GCC) -c Ghost.cpp -o Ghost.o
 
 Skull.o: Skull.cpp Skull.h mc.h enemy.h
-    $(CC) -c Skull.cpp -o Skull.o
+    $(GCC) -c Skull.cpp -o Skull.o
 
 Bridge.o: Bridge.cpp Bridge.h mc.h
-    $(CC) -c Bridge.cpp -o Bridge.o
+    $(GCC) -c Bridge.cpp -o Bridge.o
 
 Cave.o: Cave.cpp Cave.o mc.h 
-    $(CC) -c Cave.cpp -o Cave.o
+    $(GCC) -c Cave.cpp -o Cave.o
 
-RuinedCity.o: RuinedCity.cpp RuinCity.h mc.h
-    $(CC) -c RuinedCity.cpp -o RuinedCity.o
+RuinedCity.o: RuinedCity.cpp RuinedCity.h mc.h
+    $(GCC) -c RuinedCity.cpp -o RuinedCity.o
 
 options.o: options.cpp options.h mc.h
-    $(CC) -c options.cpp -o options.o
+    $(GCC) -c options.cpp -o options.o
 
-main.o: main.cpp mc.h enemy.h Minotaur.h Rogueknight.h Ghost.h Skull.h Bridge.h Cave.h RuinedCity.h options.h
-    $(CC) -c main.cpp -o main.o
+main.o: main.cpp mc.h enemy.h Minotaur.h Skull.h Rogueknight.h Ghost.h options.h Bridge.h Cave.h RuinedCity.h
+    $(GCC) -c main.cpp -o main.o
 
 clean:
-    rm $(OBJS) Project *.exe
+    rm $(OBJS) $(OUT)
