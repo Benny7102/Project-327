@@ -19,6 +19,8 @@ void BridgeCondition(mc* player)
         cout << "The bridge has collapsed." << endl;
         player -> remove_health(5);
         player -> remove_damage(3);
+        cout << "There is something at the bottom of this valley." << endl;
+        player -> add_treasure();
     }
     else
     {
