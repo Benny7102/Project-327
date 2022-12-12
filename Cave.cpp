@@ -10,7 +10,6 @@ int randnum()
 
 void Cave::pathChoice(mc* player, char choice):
 {
-    mc* here = player;
     cin >> choice;
     bool x = true;
     while (x)
