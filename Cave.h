@@ -1,12 +1,11 @@
 #ifndef Cave_H
 #define Cave_H
-#include "Minotaur.h"
-#include "Ghost.h"
-#include "enemy.h"
-#include "mc.h"
 #include <iostream>
-#include <string.h>
 #include <stdlib.h>
+#include <time.h>
+#include <math.h>
+#include <string.h>
+#include "mc.h"
 
 using namespace std;
 class Cave
