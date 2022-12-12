@@ -13,5 +13,5 @@ class Bridge
 	BridgeCondition(mc* player, int, int);
 }
 
-int randnum(int num, int num2)
+int randnum(int, int)
 #endif
