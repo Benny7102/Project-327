@@ -1,7 +1,7 @@
 #ifndef mc_H
 #define mc_H
 
-class mc:
+class mc
 {
     private:
     int health;
@@ -12,13 +12,15 @@ class mc:
     mc();
     mc(int, int);
     void remove_health(int);
-    void add_health(int);
+    void healing(int);
     void add_damage(int);
     void remove_damage(int);
-    void add_treasure(int);
+    void add_treasure();
     void remove_gold(int);
-    void add_gold(int);
-    void winner();
+    void add_gold();
+    int returnwin();
+    bool killed();
+    int attack();
     void showstatus();
 };
 
