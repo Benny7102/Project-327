@@ -59,8 +59,7 @@ void cityChoice(mc* player)
             if (choice_num == 0)
             {
                 cout << "God's wrath descends upon you as you stepped into the cursed temple.\n" << endl;
-                cout << "YOU DIED";
-                player -> killed();
+                player -> remove_health(100000);
             }
             else if(choice_num == 1)
             {
