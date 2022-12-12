@@ -33,13 +33,13 @@ Bridge.o: Bridge.cpp Bridge.h mc.h
 Cave.o: Cave.cpp Cave.o mc.h 
     $(GCC) -c Cave.cpp -o Cave.o
 
-RuinedCity.o: RuinedCity.cpp RuinCity.h mc.h
+RuinedCity.o: RuinedCity.cpp RuinedCity.h mc.h
     $(GCC) -c RuinedCity.cpp -o RuinedCity.o
 
 options.o: options.cpp options.h mc.h
     $(GCC) -c options.cpp -o options.o
 
-main.o: main.cpp mc.h enemy.h Minotaur.h Rogueknight.h Ghost.h Skull.h Bridge.h Cave.h RuinedCity.h options.h
+main.o: main.cpp mc.h enemy.h Minotaur.h Skull.h Rogueknight.h Ghost.h options.h Bridge.h Cave.h RuinedCity.h
     $(GCC) -c main.cpp -o main.o
 
 clean:
