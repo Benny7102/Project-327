@@ -10,7 +10,7 @@ class Bridge
 {
     public:
     int bridge_num;
-	BridgeCondition(mc* player, int, int);
+	BridgeCondition(mc* player);
 }
 
 int randnum(int, int)
