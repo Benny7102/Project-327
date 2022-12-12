@@ -24,34 +24,40 @@ mc::mc(int h, int d)
 
 void mc::remove_health(int d)
 {
+    cout << "Your health decrease by " << d << ".";
     health = health - d;
 }
 
 void mc::healing(int h)
 {
+    cout << "Your health increase by " << h << ".";
     health = health + h;
 }
 
 void mc::add_damage(int d)
-    {
-        damage = damage + d;
-    }
+{
+    cout << "Your damage increase by " << d << ".";    
+    damage = damage + d;
+}
 
 void mc::remove_damage(int d)
 {
+    cout << "Your damage decrease by " << d << ".";
     damage = damage - d;
 }
 
 void mc::add_treasure()
 {
     srand (time(NULL));
-    int random =1 + (rand() %3);
+    int random =2 + (rand() %4);
     treasure = treasure + random;
+    cout << "You have gain " << random << " treasures." << endl;
 }
 
 void mc::remove_gold(int cost)
 {
     gold = gold - cost;
+    cout << "Your gold amount decrease by " << cost << " gold." << endl;
 }
 
 void mc::add_gold()
@@ -59,6 +65,7 @@ void mc::add_gold()
     srand (time(NULL));
     int random =1 + (rand() %21);
     gold = gold + random;
+    cout << "You have gain " << random << " gold." << endl;
 }
 
 int mc::returnwin()
@@ -68,16 +75,18 @@ int mc::returnwin()
 
 bool mc::killed()
 {
-    if (health < 0){
-        return false;
+    if (health <= 0){
+        health = 0;
+        return true;
     }
     else{
-        return true;
+        return false;
     }
 }
 
 int mc::attack()
 {
+    cout << "You have dealt " << damage << " to the enemy!" << endl; 
     return damage;
 }
 
