@@ -13,7 +13,6 @@ int randnum(int num, int num2)
 
 void Bridge::BridgeCondition(mc* player)
 {
-    mc* x = player;
     if (bridge_num == 0)
     {
         player -> removehealth(100000);
