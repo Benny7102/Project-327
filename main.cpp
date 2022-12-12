@@ -136,7 +136,7 @@ int main(){
                     cout << "Game Over" << endl;
                     exit(0);
                 }
-                if (foe.ifDefeated(playpoint) == true){
+                if (foe.ifDefeated(playpoint) == false){
                     cout << "Player" << endl;
                     player.showstatus();
                     cout << "Enemy" << endl;
@@ -164,7 +164,7 @@ int main(){
                     cout << "Game Over" << endl;
                     exit(0);
                 }
-                if (foe.ifDefeated(playpoint) == true){
+                if (foe.ifDefeated(playpoint) == false){
                     cout << "Player" << endl;
                     player.showstatus();
                     cout << "Enemy" << endl;
@@ -192,7 +192,7 @@ int main(){
                     cout << "Game Over" << endl;
                     exit(0);
                 }
-                if (foe.ifDefeated(playpoint) == true){
+                if (foe.ifDefeated(playpoint) == false){
                     cout << "Player" << endl;
                     player.showstatus();
                     cout << "Enemy" << endl;
@@ -220,7 +220,7 @@ int main(){
                     cout << "Game Over" << endl;
                     exit(0);
                 }
-                if (foe.ifDefeated(playpoint) == true){
+                if (foe.ifDefeated(playpoint) == false){
                     cout << "Player" << endl;
                     player.showstatus();
                     cout << "Enemy" << endl;
