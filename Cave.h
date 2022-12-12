@@ -12,6 +12,7 @@ class Cave
 {
     public:
     int choice_num;
-    pathChoice(mc* player, char);
-}
+    void pathChoice(mc* player, char);
+};
 int randnum();
+#endif

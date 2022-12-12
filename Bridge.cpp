@@ -15,11 +15,11 @@ void Bridge::BridgeCondition(mc* player)
 {
     if (bridge_num == 0)
     {
-        player -> removehealth(100000);
+        player -> remove_health(100000);
     }
     else if (bridge_num == 1)
     {
-        player -> removehealth(5);
+        player -> remove_health(5);
     }
     else
     {
