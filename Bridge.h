@@ -6,10 +6,6 @@
 #include <math.h>
 #include "mc.h"
 
-class Bridge
-{
-    public:
-	void BridgeCondition(mc* player);
-};
+void BridgeCondition(mc* player);
 
 #endif

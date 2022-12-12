@@ -7,7 +7,7 @@
 using namespace std;
 
 
-void Cave::pathChoice(mc* player)
+void pathChoice(mc* player)
 {   
     char choice;
     cout << "Please choose a path a,b, or c:";
