@@ -276,7 +276,6 @@ int main(){
 
         srand (time(NULL));
         random = 1 + (rand() %4);
-        player.showstatus();
         if (random == 1){
             char answer;
             cout << "I am the demon from hell. You can trade 5 health for a mystery reward." << endl;
