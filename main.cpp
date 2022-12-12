@@ -129,7 +129,6 @@ int main(){
                     exit(0);
                 }
                 if (foe.ifDefeated(playpoint) == false){
-                    cout << "Player" << endl;
                     player.showstatus();
                     cout << "Enemy" << endl;
                     foe.showStatus();
@@ -157,7 +156,6 @@ int main(){
                     exit(0);
                 }
                 if (foe.ifDefeated(playpoint) == false){
-                    cout << "Player" << endl;
                     player.showstatus();
                     cout << "Enemy" << endl;
                     foe.showStatus();
@@ -186,7 +184,6 @@ int main(){
                     exit(0);
                 }
                 if (foe.ifDefeated(playpoint) == false){
-                    cout << "Player" << endl;
                     player.showstatus();
                     cout << "Enemy" << endl;
                     foe.showStatus();
@@ -215,7 +212,6 @@ int main(){
                     exit(0);
                 }
                 if (foe.ifDefeated(playpoint) == false){
-                    cout << "Player" << endl;
                     player.showstatus();
                     cout << "Enemy" << endl;
                     foe.showStatus();
