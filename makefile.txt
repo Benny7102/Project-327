@@ -2,9 +2,11 @@ GCC = g++
 
 OBJS = mc.o enemy.o Minotaur.o Rogueknight.o Ghost.o Skull.o Bridge.o Cave.o RuinedCity.o options.o main.o
 
-default: Main
+OUT = main.out
 
-Main: $(OBJS)
+default: main
+
+main: $(OBJS)
     $(GCC) -o Main $(OBJS)
 
 mc.o: mc.cpp mc.h 
@@ -37,8 +39,8 @@ RuinedCity.o: RuinedCity.cpp RuinCity.h mc.h
 options.o: options.cpp options.h mc.h
     $(GCC) -c options.cpp -o options.o
 
-main.o: main.cpp main.h mc.h enemy.h Minotaur.h Rogueknight.h Ghost.h Skull.h Bridge.h Cave.h RuinedCity.h options.h
+main.o: main.cpp mc.h enemy.h Minotaur.h Rogueknight.h Ghost.h Skull.h Bridge.h Cave.h RuinedCity.h options.h
     $(GCC) -c main.cpp -o main.o
 
 clean:
-    rm $(OBJS) Main
+    rm $(OBJS) $(OUT)
