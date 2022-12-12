@@ -6,7 +6,7 @@
 using namespace std;
 
 
-void Bridge::BridgeCondition(mc* player)
+void BridgeCondition(mc* player)
 {
     int bridge_num = (rand() %3);
     if (bridge_num == 0)

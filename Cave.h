@@ -7,11 +7,6 @@
 #include <string.h>
 #include "mc.h"
 
-using namespace std;
-class Cave
-{
-    public:
-    void pathChoice(mc* player);
-};
+void pathChoice(mc* player);
 
 #endif
