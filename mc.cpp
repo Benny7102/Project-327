@@ -44,6 +44,9 @@ void mc::remove_damage(int d)
 {
     cout << "Your damage decrease by " << d << "." << endl;
     damage = damage - d;
+    if (damage < 0){
+        damage = 0;
+    }
 }
 
 void mc::add_treasure()
@@ -58,6 +61,11 @@ void mc::remove_gold(int cost)
 {
     gold = gold - cost;
     cout << "Your gold amount decrease by " << cost << " gold." << endl;
+    if (gold < 0){
+    cout << "Your gold amount has gone to the negatives. The god of debt has claim your soul!" << endl;
+    cout << "Game Over" << endl;
+    exit(0);
+    }
 }
 
 void mc::add_gold()

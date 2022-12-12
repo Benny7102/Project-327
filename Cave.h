@@ -7,11 +7,6 @@
 #include <string.h>
 #include "mc.h"
 
-using namespace std;
-class Cave
-{
-    public:
-    int choice_num;
-    pathChoice(mc* player, char);
-}
-int randnum();
+void pathChoice(mc* player);
+
+#endif

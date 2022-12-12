@@ -6,12 +6,6 @@
 #include <math.h>
 #include "mc.h"
 
-class Bridge
-{
-    public:
-    int bridge_num;
-	BridgeCondition(mc* player);
-}
+void BridgeCondition(mc* player);
 
-int randnum(int, int)
 #endif
