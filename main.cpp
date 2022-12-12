@@ -15,7 +15,7 @@ int main(){
     mc* playpoint = &player;
     cout << "Please choose a mode. Enter 1 for normal and 2 for insanity!";
     cin >> choice; 
-    while((choice != 1) || (choice != 2)){
+    while((choice != 1) && (choice != 2)){
         cout << "Please enter a valid choice!" << endl;
         cout << "Please choose a mode. Enter 1 for normal and 2 for insanity!";
         cin >> choice;
@@ -50,6 +50,7 @@ int main(){
         foe.taken(playpoint);
         foe.dealt(playpoint);
         foe.showStatus();
+        alive = false;
     }
-    
+    return 0;
 }

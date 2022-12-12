@@ -24,25 +24,25 @@ mc::mc(int h, int d)
 
 void mc::remove_health(int d)
 {
-    cout << "Your health decrease by " << d << ".";
+    cout << "Your health decrease by " << d << "." << endl;
     health = health - d;
 }
 
 void mc::healing(int h)
 {
-    cout << "Your health increase by " << h << ".";
+    cout << "Your health increase by " << h << "." << endl;
     health = health + h;
 }
 
 void mc::add_damage(int d)
 {
-    cout << "Your damage increase by " << d << ".";    
+    cout << "Your damage increase by " << d << "." << endl;    
     damage = damage + d;
 }
 
 void mc::remove_damage(int d)
 {
-    cout << "Your damage decrease by " << d << ".";
+    cout << "Your damage decrease by " << d << "." << endl;
     damage = damage - d;
 }
 

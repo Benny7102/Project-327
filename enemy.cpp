@@ -41,6 +41,6 @@ bool enemy::ifDefeated(mc* player)
 void enemy::showStatus()
 {
     cout << "Health: " << health << endl;
-    cout << "Damage: " << health << endl;
+    cout << "Damage: " << damage << endl;
 }
 
