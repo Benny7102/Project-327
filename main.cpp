@@ -149,7 +149,6 @@ int main(){
                     }
                 }
                 else{
-                    cout << "The enemy has been defeated!" << endl;
                     fight = 'n';
                 }
             }
