@@ -120,7 +120,7 @@ int main(){
             cout << "Please choose one of the choices provided(1/2/3):";
             cin >> choice;
             if (((choice == 1)||(choice == 2))||(choice == 3)){
-                cond == false;
+                cond = false;
             }
         }while(cond);
 
