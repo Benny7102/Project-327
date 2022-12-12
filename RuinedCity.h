@@ -8,9 +8,7 @@
 #include "mc.h"
 
 using namespace std;
-class RuinedCity
-{
-    public:
-    void cityChoice(mc* player);
-};
+
+void cityChoice(mc* player);
+
 #endif

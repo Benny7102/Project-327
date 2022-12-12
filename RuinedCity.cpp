@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void RuinedCity::cityChoice(mc* player)
+void cityChoice(mc* player)
 {   
     char choice;
     cout << "Please choose a path a,b,c, or d:";
