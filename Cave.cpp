@@ -41,8 +41,7 @@ void pathChoice(mc* player)
             if (choice_num == 0)
             {
                 cout << "A mysterious presence hates you...\n" << endl;
-                cout << "YOU DIED";
-                player -> killed();
+                player -> remove_health(100000);
             }
             else if(choice_num == 1)
             {
