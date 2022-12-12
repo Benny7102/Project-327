@@ -136,25 +136,25 @@ void camp(mc* player)
     if (choice == 'y')
     {
         int medicine;
-        cout << "What medicine do you want?" << endl;
-        cout << "Green Herb (5 gold) (1)" << endl;
-        cout << "Red Herb (10 gold) (2)" << endl;
-        cout << "Gold Herb (20 gold) (3)" << endl;
+        cout << "What package do you want?" << endl;
+        cout << "Treasure pack (30 gold) (1)" << endl;
+        cout << "Mythical Weapon (30 gold) (2)" << endl;
+        cout << "Gold Herb (30 gold) (3)" << endl;
         cin >> medicine;
         if (medicine == 1)
         {
-            player->healing(5);
-            player->remove_gold(5);
+            player->add_treasure();
+            player->remove_gold(30);
         }
         else if (medicine == 2)
         {
-            player->healing(10);
-            player->remove_gold(10);
+            player->add_damage(15);
+            player->remove_gold(30);
         }
         else
         {
-            player->healing(20);
-            player->remove_gold(20);
+            player->healing(50);
+            player->remove_gold(30);
         }
     }
     else

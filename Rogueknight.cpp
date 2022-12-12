@@ -7,9 +7,9 @@
 
 using namespace std;
 
-Rogueknight::Rogueknight():enemy(150, 120, 10, 5)
+Rogueknight::Rogueknight():enemy(100, 80, 45, 25)
 {
     srand(time(NULL));
-    health = rand() % 120 + 100;
+    health = rand() % 100 + 80;
     damage = rand() % 45 + 25;
 }

@@ -5,9 +5,9 @@
 #include "Skull.h"
 #include "enemy.h"
 
-Skull::Skull():enemy(75, 50, 50, 25)
+Skull::Skull():enemy(30, 15, 60, 20)
 {
     srand(time(NULL));
-    health = rand() % 10 + 5;
-    damage = rand() % 10 + 5;
+    health = rand() % 30 + 15;
+    damage = rand() % 60 + 20;
 }
