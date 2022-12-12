@@ -241,32 +241,41 @@ int main(){
         else if(choice == 2){
                 if(two == 1){
                     cityChoice(playpoint);
+                    player.showstatus();
                 }
                 else if(two == 2){
                     BridgeCondition(playpoint);
+                    player.showstatus();
                 }
                 else{
                     pathChoice(playpoint);
+                    player.showstatus();
                 }
         }
         else{
                 if(three == 1){
                     shrine(playpoint);
+                    player.showstatus();
                 }
                 else if(three == 2){
                     fountain(playpoint);
+                    player.showstatus();
                 }
                 else if(three == 3){
                     arena(playpoint);
+                    player.showstatus();
                 }
                 else if(three == 4){
                     chest(playpoint);
+                    player.showstatus();
                 }
                 else if(three == 5){
                     camp(playpoint);
+                    player.showstatus();
                 }
                 else{
                     grave(playpoint);
+                    player.showstatus();
                 }
         }
 
