@@ -20,7 +20,7 @@ int main(){
         cout << "Please choose a mode. Enter 1 for normal and 2 for insanity!";
         cin >> choice;
     }
-    if (choice = 1){
+    if (choice == 1){
         player = mc();
     }
     else{
