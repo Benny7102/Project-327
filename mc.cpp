@@ -11,7 +11,7 @@ mc::mc()
     health = 200;
     damage = 20;
     treasure = 0;
-    gold = 0;
+    gold = 50;
 }
 
 mc::mc(int h, int d)
@@ -19,7 +19,7 @@ mc::mc(int h, int d)
     health = h;
     damage = d;
     treasure = 0;
-    gold = 0;
+    gold = 50;
 }
 
 void mc::remove_health(int d)
