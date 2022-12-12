@@ -71,6 +71,7 @@ void arena(mc* player)
     {
         srand(time(NULL));
         int foe_health = rand() % 100 + 50;
+        cout << "Your foe has been selected, if you win you shall get gold otherwise you take damage." << endl;
         if ((player->attack()) > foe_health)
         {
             int chance = rand()% 5 + 1;
@@ -78,6 +79,10 @@ void arena(mc* player)
             {
                 player->add_gold();
             }
+        }
+        else{
+            cout << "Your opponent was stronger then you" << endl;
+            player -> remove_health(10);
         }
     }
     else
