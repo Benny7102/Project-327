@@ -58,23 +58,15 @@ int main(){
         random = 1 + (rand() %4);
         if (random == 1){
             cout << "Minotaur" << endl;
-            Minotaur foe = Minotaur();
-            foe.showStatus();
         }
         else if (random == 2){
             cout << "RogueKnight" << endl;
-            Rogueknight foe = Rogueknight();
-            foe.showStatus();
         }
         else if (random == 3){
             cout << "Skull" << endl;
-            Skull foe = Skull();
-            foe.showStatus();
         }
         else{
             cout << "Ghost" << endl;
-            Ghost foe = Ghost();
-            foe.showStatus();
         }
         one = random;
 
