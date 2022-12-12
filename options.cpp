@@ -1,4 +1,8 @@
 #include "options.h"
+#include <iostream>
+#include <math.h>
+#include <time.h>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -9,55 +13,49 @@ void shrine(mc* player)
     char choice;
     cout << "Do you want to pray? (y/n)" << endl;
     cin >> choice;
+    while((choice != 'y') && (choice != 'n')){
+        cout << "Please make a choice:(y/n)";
+        cin >> choice;
+    }
     if (choice == 'y')
     {
         player->add_damage(num);
     }
-    else if (choice == 'n')
+    else
     {
         cout << "Too bad" << endl;
     }
-    else
-    {
-        cout << "Invalid input" << endl;
-    }
 }
+
 void fountain(mc* player)
 {
     srand(time(NULL));
-    int num = rand() % 10 + 5;
+    int num = 1 + (rand() %10);
     char choice;
-    cout << "Do you want to request for coins? (y/n)" << endl;
+    cout << "Do you want to throw in coins? (y/n)" << endl;
     cin >> choice;
+    while((choice != 'y') && (choice != 'n')){
+        cout << "Please make a choice:(y/n)";
+        cin >> choice;
+    }
     if (choice == 'y')
     {
-        int sacrifice;
-        cout << "What do you want to trade for coins?" << endl;
-        cout << "Health (1)" << endl;
-        cout << "Attack (2)" << endl;
-        cin >> sacrifice;
-        if (sacrifice == 1)
+
+        int sacrifice = 1 + (rand() %2); 
+        if(sacrifice == 1)
         {
-            player->remove_health(num);
-            player->add_gold();
-        }
-        else if (sacrifice == 2)
-        {
-            player->remove_damage(num);
-            player->add_gold();
+            player->healing(num);
+            player->remove_gold(5);
         }
         else
         {
-            cout << "Invalid input" << endl;
+            player->add_damage(num);
+            player->remove_gold(5);
         }
     }
-    else if (choice == 'n')
+    else 
     {
         cout << "Too bad" << endl;
-    }
-    else
-    {
-        cout << "Invalid input" << endl;
     }
 }
 void arena(mc* player)
@@ -65,6 +63,10 @@ void arena(mc* player)
     char choice;
     cout << "Do you want to enter an arena? (y/n)" << endl;
     cin >> choice;
+    while((choice != 'y') && (choice != 'n')){
+        cout << "Please make a choice:(y/n)";
+        cin >> choice;
+    }
     if (choice == 'y')
     {
         srand(time(NULL));
@@ -78,20 +80,21 @@ void arena(mc* player)
             }
         }
     }
-    else if (choice == 'n')
+    else
     {
         cout << "You need some bigger guts!" << endl;
     }
-    else
-    {
-        cout << "Invalid input" << endl;
-    }
 }
+
 void chest(mc* player)
 {
     char choice;
     cout << "Do you want to open a chest? (y/n)" << endl;
     cin >> choice;
+    while((choice != 'y') && (choice != 'n')){
+        cout << "Please make a choice:(y/n)";
+        cin >> choice;
+    }
     if (choice == 'y')
     {
         srand(time(NULL));
@@ -111,11 +114,16 @@ void chest(mc* player)
         cout << "Good decision!" << endl;
     }
 }
+
 void camp(mc* player)
 {
     char choice;
     cout << "Do you want medicine? (y/n)" << endl;
     cin >> choice;
+    while((choice != 'y') && (choice != 'n')){
+        cout << "Please make a choice:(y/n)";
+        cin >> choice;
+    }
     if (choice == 'y')
     {
         int medicine;
@@ -134,30 +142,27 @@ void camp(mc* player)
             player->healing(10);
             player->remove_gold(10);
         }
-        else if (medicine == 3)
+        else
         {
             player->healing(20);
             player->remove_gold(20);
         }
-        else
-        {
-            cout << "Invalid input" << endl;
-        }
-    }
-    else if (choice == 'n')
-    {
-        cout << "You do not want medicine" << endl;
     }
     else
     {
-        cout << "Invalid input" << endl;
+        cout << "You do not want medicine." << endl;
     }
 }
+
 void grave(mc* player)
 {
     char choice;
     cout << "Do you want to rob a grave? (y/n)" << endl;
     cin >> choice;
+    while((choice != 'y') && (choice != 'n')){
+        cout << "Please make a choice:(y/n)";
+        cin >> choice;
+    }
     srand(time(NULL));
     int num = rand() % 10 + 5;
     if (choice == 'y')
@@ -165,12 +170,8 @@ void grave(mc* player)
         player->add_gold();
         player->remove_health(num);
     }
-    else if (choice == 'n')
-    {
-        cout << "Good decision!" << endl;
-    }
     else
     {
-        cout << "Invalid input" << endl;
+        cout << "Good decision!" << endl;
     }
 }

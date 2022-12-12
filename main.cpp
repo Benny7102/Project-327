@@ -136,9 +136,21 @@ int main(){
                     cout << "Game Over" << endl;
                     exit(0);
                 }
-                foe.showStatus();
-                cout << "Would you like to attack again?(y/n):";
-                cin >> fight;
+                if (foe.ifDefeated(playpoint) == true){
+                    cout << "Player" << endl;
+                    player.showstatus();
+                    cout << "Enemy" << endl;
+                    foe.showStatus();
+                    cout << "Would you like to attack again?(y/n):";
+                    cin >> fight;
+                    while((fight != 'y') && (fight != 'n')){
+                    cout << "Please make a choice:(y/n)";
+                    cin >> fight;
+                    }
+                }
+                else{
+                    cout << "The enemy has been defeated!" << endl;
+                }
             }
             }
             else if (one == 2){
@@ -152,9 +164,21 @@ int main(){
                     cout << "Game Over" << endl;
                     exit(0);
                 }
-                foe.showStatus();
-                cout << "Would you like to attack again?(y/n):";
-                cin >> fight;
+                if (foe.ifDefeated(playpoint) == true){
+                    cout << "Player" << endl;
+                    player.showstatus();
+                    cout << "Enemy" << endl;
+                    foe.showStatus();
+                    cout << "Would you like to attack again?(y/n):";
+                    cin >> fight;
+                    while((fight != 'y') && (fight != 'n')){
+                    cout << "Please make a choice:(y/n)";
+                    cin >> fight;
+                    }
+                }
+                else{
+                    cout << "The enemy has been defeated!" << endl;
+                }
             }
             }
             else if (one == 3){
@@ -168,9 +192,21 @@ int main(){
                     cout << "Game Over" << endl;
                     exit(0);
                 }
-                foe.showStatus();
-                cout << "Would you like to attack again?(y/n):";
-                cin >> fight;
+                if (foe.ifDefeated(playpoint) == true){
+                    cout << "Player" << endl;
+                    player.showstatus();
+                    cout << "Enemy" << endl;
+                    foe.showStatus();
+                    cout << "Would you like to attack again?(y/n):";
+                    cin >> fight;
+                    while((fight != 'y') && (fight != 'n')){
+                    cout << "Please make a choice:(y/n)";
+                    cin >> fight;
+                    }
+                }
+                else{
+                    cout << "The enemy has been defeated!" << endl;
+                }
             }
             }
             else{
@@ -184,9 +220,21 @@ int main(){
                     cout << "Game Over" << endl;
                     exit(0);
                 }
-                foe.showStatus();
-                cout << "Would you like to attack again?(y/n):";
-                cin >> fight;
+                if (foe.ifDefeated(playpoint) == true){
+                    cout << "Player" << endl;
+                    player.showstatus();
+                    cout << "Enemy" << endl;
+                    foe.showStatus();
+                    cout << "Would you like to attack again?(y/n):";
+                    cin >> fight;
+                    while((fight != 'y') && (fight != 'n')){
+                    cout << "Please make a choice:(y/n)";
+                    cin >> fight;
+                    }
+                }
+                else{
+                    cout << "The enemy has been defeated!" << endl;
+                }
             }
             }
         }

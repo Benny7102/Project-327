@@ -12,18 +12,14 @@ enemy::enemy(int r1, int e1, int r2, int e2)
 }
 void enemy::taken(mc* player)
 {
-    if (ifDefeated(player) == 0)
-    {
-        health-=(player->attack());
-    }
+    health-=(player->attack());
 }
+
 void enemy::dealt(mc* player)
 {
-    if (ifDefeated(player) == 0)
-    {
-        player->remove_health(damage);
-    }
+   player->remove_health(damage);
 }
+
 bool enemy::ifDefeated(mc* player)
 {
     if (health <= 0)
@@ -31,11 +27,11 @@ bool enemy::ifDefeated(mc* player)
         health = 0;
         cout << "The enemy has been defeated!" << endl;
         player-> add_gold();
-        return 1;
+        return true;
     }
     else
     {
-        return 0;
+        return false;
     }
 }
 void enemy::showStatus()

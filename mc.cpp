@@ -26,6 +26,10 @@ void mc::remove_health(int d)
 {
     cout << "Your health decrease by " << d << "." << endl;
     health = health - d;
+    if(killed()){
+        cout << "You have died" << endl;
+        exit(0);
+    }
 }
 
 void mc::healing(int h)
