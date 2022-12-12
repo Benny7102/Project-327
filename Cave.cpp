@@ -21,18 +21,23 @@ void pathChoice(mc* player)
             if (choice_num == 0)
             {
                 cout << "'COUGH COUGH' Poison... My strength is leaving me...";
-                player -> remove_health(5);
-                player -> remove_damage(4);
+                player -> remove_health(1);
+                player -> remove_health(1);
+                player -> remove_health(1);
+                player -> remove_health(1);
+                player -> remove_health(1);
+                player -> remove_damage(2);
             }
             else if(choice_num == 1)
             {
-                cout << "Praying at the altar gives you a boost in strength! Choosing this path was a great idea!" << endl;
+                cout << "Passing through a sacred room, gives you a boost in strength! Choosing this path was a great idea!" << endl;
                 player -> add_damage(3);
             }
             else
             {
-                cout << "I feel so tired. That path took too long to get through." << endl;
-                player -> remove_damage(1);
+                cout << "I feel so tired. That path took too long to get through. However it was worth it." << endl;
+                player -> remove_damage(2);
+                player -> add_treasure();
             }
         x = false;
         }
@@ -45,14 +50,19 @@ void pathChoice(mc* player)
             }
             else if(choice_num == 1)
             {
-                cout << "Holy crap... Some health potions" << endl;
-                player -> healing(10);
+                cout << "This is a sacred pool" << endl;
+                player -> healing(20);
             }
             else
             {
-                cout << "CHA CHING GOLD GOLD GOLD!" << endl;
+                cout << "A pirates hideout! Your gonna be rich." << endl;
                 player -> add_gold();
                 player -> add_gold();
+                int num = 1 + (rand() %4);
+                if(num == 1){
+                    cout << "What is this box?" << endl;
+                    player ->add_treasure();
+                }
             }
         x = false;
         }

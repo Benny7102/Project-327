@@ -16,19 +16,18 @@ void cityChoice(mc* player)
             if (choice_num == 0)
             {
                 cout << "Bandits have come for your money but you beat them and stole their money instead.";
-                player -> add_damage(3);
                 player -> add_gold();
             }
             else if(choice_num == 1)
             {
                 cout << "The Lost Soldiers from the ruined city view you as a threat and attacked you. You survived but lost health and strength after fighting them." << endl;
-                player -> remove_health(5);
-                player -> remove_damage(3);
+                player -> remove_health(10);
+                player -> remove_damage(2);
             }
             else
             {
-                cout << "You found adrenaline and you take it to keep you going." << endl;
-                player -> add_damage(5);
+                cout << "You found a sacred weapon that makes you stronger." << endl;
+                player -> add_damage(7);
             }
         x = false;
         }
@@ -43,13 +42,15 @@ void cityChoice(mc* player)
             }
             else if(choice_num == 1)
             {
-                cout << "You find a medical kit and use it to patch yourself up." << endl;
+                cout << "You find a healing herb and use it to patch yourself up." << endl;
                 player -> healing(4);
             }
             else
             {
                 cout << "You fell into a ditch and broke your ankle. But you see and abandoned gold mine..." << endl;
-                player -> remove_health(3);
+                player -> remove_health(5);
+                player -> remove_damage(5);
+                player -> add_gold();
                 player -> add_gold();
             }
         x = false;
@@ -63,14 +64,19 @@ void cityChoice(mc* player)
             }
             else if(choice_num == 1)
             {
-                cout << "You take on a bounty mission by bandits which tires you out but makes you some good money." << endl;
+                cout << "You met a group of bandits, you live to tell the tale." << endl;
                 player -> add_gold();
-                player -> remove_damage(3);
+                player -> remove_health(5);
             }
             else
             {
-                cout << "Nothing happened...\n" << endl;
-                cout << "Guess thats good and bad luck...\n" << endl;
+                cout << "You saw a injured person. You go over to help." << endl;
+                cout << "Turns out he was a god in disguise. He blesses your kind heart." << endl;
+                cout << "Before leaving he gives you stuff he collected from a nearby temple" << endl;
+                player -> add_damage(10);
+                player -> healing(20);
+                player -> add_gold();
+                player -> add_treasure();
             }
         x = false;
         }
@@ -78,21 +84,24 @@ void cityChoice(mc* player)
         {
             if (choice_num == 0)
             {
-                cout << "The toxic fumes of the city from this path is starting to affect you." << endl;
-                player -> remove_damage(2);
-                player -> remove_health(2);
+                cout << "The toxic fumes of the moss from this path is starting to affect you." << endl;
+                player -> remove_damage(1);
+                player -> remove_health(1);
+                player -> remove_damage(1);
+                player -> remove_health(1);
+                player -> remove_damage(1);
+                player -> remove_health(1);
             }
             else if(choice_num == 1)
             {
-                cout << "You meet a resistance force that is planning to rebuild the city. They help you out and give you money for your travels." << endl;
-                player -> healing(4);
+                cout << "You meet a resistance force that is planning to rebuild a settlement. They help you out and give you money for your travels." << endl;
+                player -> healing(10);
                 player -> add_gold();
             }
             else
             {
-                cout << "Now that is bad luck right? You lost your money while traveling and fighting your way through the slums." << endl;
-                player -> remove_gold(4);
-                player -> remove_gold(2);
+                cout << "Now that is bad luck right? You lost your money while traveling and fighting your way through a group of gremlins." << endl;
+                player -> remove_gold(8);
                 player -> remove_damage(3);
                 player -> remove_health(5);
             }

@@ -23,10 +23,15 @@ void enemy::dealt(mc* player)
 bool enemy::ifDefeated(mc* player)
 {
     if (health <= 0)
-    {
+    {   
+        srand(time(NULL));
+        int num = 1 + (rand() %3);
         health = 0;
         cout << "The enemy has been defeated!" << endl;
         player-> add_gold();
+        if (num == 1){
+            player -> add_treasure();
+        }
         return true;
     }
     else

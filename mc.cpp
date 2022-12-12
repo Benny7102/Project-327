@@ -75,7 +75,7 @@ void mc::remove_gold(int cost)
 void mc::add_gold()
 {
     srand (time(NULL));
-    int random =1 + (rand() %21);
+    int random =10 + (rand() %21);
     gold = gold + random;
     cout << "You have gain " << random << " gold." << endl;
 }

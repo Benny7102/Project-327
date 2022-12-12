@@ -115,6 +115,7 @@ void chest(mc* player)
         else if (num == 2)
         {
             int health_taken = rand() % 10 + 5;
+            cout << "The chest was a trap. You barely dodged a rock." << endl;
             player->remove_health(health_taken);
         }
     }
@@ -127,7 +128,7 @@ void chest(mc* player)
 void camp(mc* player)
 {
     char choice;
-    cout << "Do you want medicine? (y/n)" << endl;
+    cout << "Do you wanna trade? (y/n)" << endl;
     cin >> choice;
     while((choice != 'y') && (choice != 'n')){
         cout << "Please make a choice:(y/n)";
@@ -148,7 +149,7 @@ void camp(mc* player)
         }
         else if (medicine == 2)
         {
-            player->add_damage(15);
+            player->add_damage(20);
             player->remove_gold(30);
         }
         else
