@@ -17,7 +17,7 @@ class enemy
         enemy(int, int, int, int);
         void taken(mc* player);
         void dealt(mc* player);
-        bool ifDefeated();
+        bool ifDefeated(mc* player);
         void showStatus();
 };
 
