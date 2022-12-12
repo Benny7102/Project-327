@@ -1,8 +1,9 @@
 #include <iostream>
 #include <math.h>
 #include <string>
-using namespace std;
 #include "enemy.h"
+using namespace std;
+
 
 enemy::enemy(int r1, int e1, int r2, int e2)
 {
@@ -14,7 +15,7 @@ void enemy::taken(mc* player)
 {
     if (ifDefeated() == 0)
     {
-        health-=(player->Attack());
+        health-=(player->attack());
     }
 }
 void enemy::dealt(mc* player)
