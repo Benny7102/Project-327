@@ -41,16 +41,20 @@ void fountain(mc* player)
     if (choice == 'y')
     {
 
-        int sacrifice = 1 + (rand() %2); 
+        int sacrifice = 1 + (rand() %3); 
         if(sacrifice == 1)
         {
             player->healing(num);
             player->remove_gold(5);
         }
-        else
+        else if(sacrifice == 2)
         {
             player->add_damage(num);
             player->remove_gold(5);
+        }
+        else
+        {
+            player -> add_treasure();
         }
     }
     else 
@@ -172,7 +176,7 @@ void grave(mc* player)
     int num = rand() % 10 + 5;
     if (choice == 'y')
     {
-        player->add_gold();
+        player->add_treasure();
         player->remove_health(num);
     }
     else
